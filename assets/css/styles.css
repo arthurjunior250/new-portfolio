@@ -561,6 +561,7 @@ body.dark-theme {
 }
 
 .products__card:hover {
+    background-color: var(--first-color);
   box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
 }
 
@@ -617,17 +618,17 @@ body.dark-theme {
   opacity: 0;
 }
 
-.new__card:hover {
+.featured__card:hover {
   background-color: var(--first-color);
   box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
   padding: 2rem 0 3rem 0;
 }
 
-.new__card:hover .new__tag {
+.featured__card:hover .new__tag {
   background-color: var(--button-color);
 }
 
-.new__card:hover .new__button {
+.featured__card:hover .new__button {
   transform: translateY(0);
   opacity: 1;
 }
@@ -691,7 +692,9 @@ body.dark-theme {
   flex-direction: column;
   row-gap: .75rem;
 }
-
+.footer__list a{
+  color:var(--text-color);
+}
 .footer__link {
   color: var(--text-color);
 }
@@ -1101,4 +1104,47 @@ body.dark-theme {
   .scrollup {
     right: 3rem;
   }
+}
+
+
+/*=============== CONTACT ===============*/
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+
+form button:hover {
+    align-items: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+.form {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--first-color);
+    padding: 20px;
+    width: 50%;
+}
+
+textarea {
+    resize: none;
+    min-height: 140px;
 }

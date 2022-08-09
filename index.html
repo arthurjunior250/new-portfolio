@@ -82,7 +82,7 @@
                             My specialty is FrontEnd web design and development, making pixel magic in photoshop and turning it beautiful. extend beyond the web I love helping people with branding. I even love making designs move by professionals.
                         </p>
                         <div style="margin-top:40px;">
-                            <a href="#" class="button button--small">Learn More</a>
+                            <a href="#about" class="button button--small">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                             My name is DUSABIMANA Arthur Junior and I am a Web Application Developer, currently living in Rwanda, Kigali. I have a Bachelor of Science in Computer and software engineering from the University of Rwanda, and my primary focus and inspiration for my studies is Web Development. I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, embedded systems technology and strive to better myself as a developer, and the development community as a whole.
                         </p>
     
-                        <a href="#" class="button button--small">Download Resume</a>
+                        <a href="https://docs.google.com/document/d/1ujaJUgz6gPgy6atfp_OVmNOMZZ1_MRxfUG_0Xszr7_0/edit?usp=sharing" target="_blank" class="button button--small">Download Resume</a>
                     </div>
 
                     <div class="story__images">
@@ -114,7 +114,7 @@
                 <h2 class="section__title">
                     Projects
                 </h2>
-
+        
                 <div class="featured__container grid">
                     <article class="featured__card">
 
@@ -122,9 +122,10 @@
 
                         <div class="featured__data">
                             <h3 class="featured__title">Flashcards</h3>
+                            <p style="margin-bottom:10px ;">Flashcards are small note cards used for testing and improving memory through practiced information retrieval. Flashcards are typically two-sided, with the prompt on one side and the information about the prompt on the other.</p>
                         </div>
 
-                        <button class="button featured__button">VISIT</button>
+                        <a href="https://flashcards-arthur-junior.netlify.app/" target="_blank"><button class="button featured__button">VISIT</button></a>
                     </article>
 
                     <article class="featured__card">
@@ -133,9 +134,10 @@
 
                         <div class="featured__data">
                             <h3 class="featured__title">Portfolio</h3>
+                            <p style="margin-bottom:10px ;">At Myfirstportfolio my core aim was to assist my clients to meet their expectations and build enduring relationship. I take the opportunity to introduce myself as professionals with a single vision and mission statement</p>
                         </div>
 
-                        <button class="button featured__button">VISIT</button>
+                        <a href="http://arthurjunior.tk" target="_blank"><button class="button featured__button">VISIT</button></a>
                     </article>
 
                     <article class="featured__card">
@@ -144,9 +146,10 @@
 
                         <div class="featured__data">
                             <h3 class="featured__title">Phantom</h3>
+                            <p style="margin-bottom:10px ;">It was Team Project: we have created an application that simulates bus movements and enables passengers to track their locations & movements.(project from Andela Technical Leadership Program[ATLP])</p>
                         </div>
 
-                        <button class="button featured__button">VISIT</button>
+                       <a href="https://phantom-dream-team.netlify.app/" target="_blank"> <button class="button featured__button">VISIT</button></a>
                     </article>
                 </div>
             </section>
@@ -252,26 +255,50 @@
                     </article>
                 </div>
             </section>
+               <!--==================== CONTACT ====================-->
+               <section class="newsletter section container" id="contact">
+                <h2 class="section__title">
+                    CONTACT ME
+                </h2>
+                <div class="form" >
+                <form >
+
+                    <input type="text" placeholder="Enter Your name.." required="" id="contact-name" >
+                    <span class='error-message' id='name-error'></span>
+
+                    <input type="text" placeholder="Enter Your Email.." required="" id="contact-email" onkeyup='validateEmail()'>
+                    <span class='error-message' id='email-error'></span>
+
+                    <textarea placeholder="Leave Your Message.." style="height:200px" required="" id='contact-message'></textarea>
+                    <span class='error-message' id='message-error'></span>
+
+                    <button type="submit" id="submit" class="button">Send</button>
+                    <br<span class='error-message' id='submit-error'></span>
+
+                </form>
+                </div>
+            </section>
             <!--==================== NEWSLETTER ====================-->
             <section class="newsletter section container">
                 <div class="newsletter__bg grid">
                     <div>
-                        <h2 class="newsletter__title">Subscribe Our <br> Newsletter</h2>
+                        <h2 class="newsletter__title">Subscribe My <br> Newsletter</h2>
                         <p class="newsletter__description">
-                            Don't miss out on your discounts. Subscribe to our email 
+                            Don't miss out on your discounts. Subscribe to my email 
                             newsletter to get the best offers, discounts, coupons, 
                             gifts and much more.
                         </p>
                     </div>
 
-                    <form action="" class="newsletter__subscribe">
-                        <input type="email" placeholder="Enter your email" class="newsletter__input">
-                        <button class="button">
+                    <div class="newsletter__subscribe">
+                        <input type="email" placeholder="Enter your email" id="body-email" class="newsletter__input">
+                        <button class="button" id="sub" onclick='subNewsletter()'>
                             SUBSCRIBE
                         </button>
-                    </form>
+                    </div>
                 </div>
             </section>
+            
         </main>
 
         <!--==================== FOOTER ====================-->
@@ -282,7 +309,7 @@
 
                     <ul class="footer__list">
                         <li>KIGALI/RWANDA</li>
-                        <li>+250-787-691-306</li>
+                        <li><a href="tel:+250787691306">+250-787-691-306</a></li>
                     </ul>
                 </div>
                 <div class="footer__content">
@@ -290,10 +317,10 @@
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#" class="footer__link">Support Center</a>
+                            <a href="#contact" class="footer__link">Support Center</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link">Customer Support</a>
+                            <a href="#contact" class="footer__link">Customer Support</a>
                         </li>
                     </ul>
                 </div>
@@ -303,16 +330,16 @@
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#" class="footer__link">Front-End</a>
+                            <a href="#contact" class="footer__link">Front-End</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link">Back-End</a>
+                            <a href="#contact" class="footer__link">Back-End</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link">UI/UX Design</a>
+                            <a href="#contact" class="footer__link">UI/UX Design</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link">Photoshop</a>
+                            <a href="#contact" class="footer__link">Photoshop</a>
                         </li>
                     </ul>
                 </div>
@@ -321,16 +348,19 @@
                     <h3 class="footer__title">Social</h3>
 
                     <ul class="footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <a href="https://web.facebook.com/ARTHURJUNIOR250/timeline?lst=100003757660403%3A100003757660403%3A1595038098" target="_blank" class="footer__social-link">
                             <i class='bx bxl-facebook'></i>
                         </a>
 
-                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <a href="https://twitter.com/arthurjunior250"target="_blank" class="footer__social-link">
                             <i class='bx bxl-twitter' ></i>
                         </a>
 
-                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <a href="https://www.instagram.com/arthurjunior250/" target="_blank" class="footer__social-link">
                             <i class='bx bxl-instagram' ></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dusabimana-arthur-junior-a8189820a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5Im4%2B23OTsSVtesCYyzSmQ%3D%3D" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-linkedin' ></i>
                         </a>
                     </ul>
                 </div>
@@ -360,4 +390,10 @@
 		loop: true
 	})
 </script>
+ <!--=============== CONTACT JS ===============-->
+ <script src="./assets/js/contact.js"></script>
+<!--=============== SUBSCRIBE JS ===============-->
+  <script src="./assets/js/subscribe.js"></script>
+ <!--=============== SWEETALERT POPUP  ===============-->
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

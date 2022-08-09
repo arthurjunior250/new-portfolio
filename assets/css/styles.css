@@ -876,6 +876,11 @@ body.dark-theme {
 .show-cart {
   right: 0;
 }
+@media screen and (max-width:768px){
+  #form{
+    width: 100%;
+}
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -907,7 +912,11 @@ body.dark-theme {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
+  #form{
+    width: 100%;
 }
+}
+
 
 /* For medium devices */
 @media screen and (min-width: 576px) {

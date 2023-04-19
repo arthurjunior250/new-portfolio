@@ -15,7 +15,10 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
-
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Mr. ARTHUR JUNIOR</title>
     </head>
     <body>
@@ -23,7 +26,8 @@
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOBJREFUSEvtldENwjAMRF83YBNgA9gEJoBNYASYBEaATdgAdIhUVWo7baFCQuQ39j07kc8VI59qZH26AFbABphBHX8HLsAeOEZFRoAJcHoJJ40UL0A6Ai2BmwWKAEqcZkkWQCGKnfcBbIGdkeABFLoGDnmO14FVvXIjgNmFB2i+cbOoCNAsoM75XcDH5q/LoL0F6/sHJVhL7w8oDu7XnsiziuiTr5nzPmO9DjyziwC9zC5ZcG7XHsCsPupAd1o4Z2Mn5BCJL4YsnCSklakny7uRsFZmawdY9lua0MH3o3vRA87hKBl9oLVKAAAAAElFTkSuQmCC"/>
+                    <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOBJREFUSEvtldENwjAMRF83YBNgA9gEJoBNYASYBEaATdgAdIhUVWo7baFCQuQ39j07kc8VI59qZH26AFbABphBHX8HLsAeOEZFRoAJcHoJJ40UL0A6Ai2BmwWKAEqcZkkWQCGKnfcBbIGdkeABFLoGDnmO14FVvXIjgNmFB2i+cbOoCNAsoM75XcDH5q/LoL0F6/sHJVhL7w8oDu7XnsiziuiTr5nzPmO9DjyziwC9zC5ZcG7XHsCsPupAd1o4Z2Mn5BCJL4YsnCSklakny7uRsFZmawdY9lua0MH3o3vRA87hKBl9oLVKAAAAAElFTkSuQmCC"/> -->
+                    <img src="./assets/img/log02024.png" alt="" srcset="">
                      Arthur Junior
                 </a>
 
@@ -42,9 +46,9 @@
                             <a href="#skills" class="nav__link">My skills</a>
                         </li>
                       
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="#contact" class="nav__link">Contact</a>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav__item">
                             <a href="#" class="button button--small">Login</a>
                         </li> -->
@@ -70,16 +74,16 @@
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 <div class="home__container container grid">
-                    <div class="home__img-bg">
+                    <div class="home__img-bg" data-aos="fade-left">
                         <img src="assets/img/junior1.png" alt="" class="home__img">
                     </div>
-                    <div class="info">
+                    <div class="info" data-aos="fade-right">
                         <h2>Hi there! I'm</h2>
                         <h1>Arthur Junior,</h1>
                         <h1><span class="auto-input"></span></h1>
                         <h1>based in Kigali,Rwanda</h1>
                         <p>
-                            My specialty is FrontEnd web design and development, making pixel magic in photoshop and turning it beautiful. extend beyond the web I love helping people with branding. I even love making designs move by professionals.
+                            I specialize in FrontEnd web design and development, which means I focus on creating the visual and interactive aspects of a website that users see and interact with. My expertise lies in using languages such as HTML, CSS, and JavaScript to build responsive and user-friendly websites that enhance the user experience. I am knowledgeable in various FrontEnd frameworks and libraries such as React and am capable of designing and developing custom solutions to meet my clients' needs. My passion for staying up-to-date with the latest web design and development trends and technologies ensures that I always deliver high-quality and cutting-edge solutions.
                         </p>
                         <div style="margin-top:40px;">
                             <a href="#about" class="button button--small">Learn More</a>
@@ -91,18 +95,20 @@
               <!--==================== ABOUT ====================-->
               <section class="story section container" id="about">
                 <div class="story__container grid">
-                    <div class="story__data">
+                    <div class="story__data" data-aos="fade-left">
                         <h2 class="section__title story__section-title">
                             About Me
                         </h2>
                         <p class="story__description">
-                            My name is DUSABIMANA Arthur Junior and I am a Web Application Developer, currently living in Rwanda, Kigali. I have a Bachelor of Science in Computer and software engineering from the University of Rwanda, and my primary focus and inspiration for my studies is Web Development. I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, embedded systems technology and strive to better myself as a developer, and the development community as a whole.
+                            My name is DUSABIMANA Arthur Junior, and I am a Web Application Developer based in Kigali, Rwanda. I hold a Bachelor of Science in Computer and Software Engineering from the University of Rwanda, with a primary focus on Web Development. As a driven and self-motivated individual, I am always seeking to expand my skillset by experimenting with new technologies and techniques.
+
+                            My passion for Web Development and embedded systems technology fuels my desire to continuously improve myself as a developer and contribute to the development community as a whole. I believe that through collaboration and sharing knowledge, we can create better solutions that have a positive impact on society. I am excited about the future of technology and its potential to transform the world, and I am committed to being a part of that change.
                         </p>
     
                         <a href="https://docs.google.com/document/d/1ujaJUgz6gPgy6atfp_OVmNOMZZ1_MRxfUG_0Xszr7_0/edit?usp=sharing" target="_blank" class="button button--small">Download Resume</a>
                     </div>
 
-                    <div class="story__images">
+                    <div class="story__images" data-aos="fade-right">
                         <img src="assets/img/aboutme.jpg" alt="" class="story__img">
                         <div class="story__square"></div>
                     </div>
@@ -110,7 +116,8 @@
             </section>
 
             <!--==================== PROJECTS ====================-->
-            <section class="featured section container" id="projects">
+            <section class="featured section container" id="projects"  data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
                 <h2 class="section__title">
                     Projects
                 </h2>
@@ -157,14 +164,15 @@
           
 
             <!--==================== MY SKILLS ====================-->
-            <section class="products section container" id="skills">
+            <section class="products section container" id="skills"  data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
                 <h2 class="section__title">
                     SKILLS
                 </h2>
 
-                <div class="products__container grid">
+                <!-- <div class="products__container grid"> -->
 
-                    <article class="products__card">
+                    <!-- <article class="products__card">
                         <img src="assets/img/React-icon.svg.png" alt="" class="products__img">
 
                         <h3 class="products__title">React</h3>
@@ -235,9 +243,123 @@
                         <img src="assets/img/JQuery-Logo.svg.png" alt="" class="products__img">
 
                         <h3 class="products__title">Jquery</h3>
-                    </article>
+                    </article> -->
+                        <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">     
+        <article class="products__card">
+        <img src="assets/img/React-icon.svg.png" alt="" class="products__img">
+
+        <h3 class="products__title">React</h3>
+    </article>
+       </div>
+       <div class="swiper-slide">  
+       <article class="products__card">
+        <img src="assets/img/Bootstrap_logo.svg.png" alt="" class="products__img">
+
+        <h3 class="products__title">Bootstrap</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/firebase-1.svg" alt="" class="products__img">
+
+        <h3 class="products__title">Firebase</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/tailwindcss-1633184775.jpg" alt="" class="products__img">
+
+        <h3 class="products__title">Tailwind</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/png-transparent-logo-html-html5.png" alt="" class="products__img">
+
+        <h3 class="products__title">HTML</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/CSS3_logo.svg.png" alt="" class="products__img">
+
+        <h3 class="products__title">CSS</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/mongodb-logo.png" alt="" class="products__img">
+
+        <h3 class="products__title">MongoDb</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/png-clipart-postgresql-database-logo-application-software-computer-software-mysql-logo-blue-text.png" alt="" class="products__img">
+
+        <h3 class="products__title">PostgreSQL</h3>
+    </article>
+    
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/1_rxJgPRBppDajIlafVyffQw.png" alt="" class="products__img">
+
+        <h3 class="products__title">Typescript</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/javascript.svg" alt="" class="products__img">
+
+        <h3 class="products__title">Javascript</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/nodejs-logo-FBE122E377-seeklogo.com.png" alt="" class="products__img">
+
+        <h3 class="products__title">Nodejs</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/62a86c8014a38cce0c371c0f.png" alt="" class="products__img">
+
+        <h3 class="products__title">GraphQL</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/WordPress-Logo.png" alt="" class="products__img">
+
+        <h3 class="products__title">Wordpress</h3>
+    </article>
+</div>
+    <div class="swiper-slide">  
+    <article class="products__card">
+        <img src="assets/img/JQuery-Logo.svg.png" alt="" class="products__img">
+
+        <h3 class="products__title">Jquery</h3>
+    </article>
+</div>
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
                 </div>
             </section>
+                             
                <!--==================== CONTACT ====================-->
                <!-- <section class="newsletter section container" id="contact">
                 <h2 class="section__title">
@@ -286,7 +408,7 @@
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
-            <div class="footer__container container grid">
+            <div class="footer__container container grid" data-aos="fade-right">
                 <!-- <div class="footer__content">
                     <h3 class="footer__title">My information</h3>
 
@@ -379,4 +501,56 @@
   <script src="./assets/js/subscribe.js"></script>
  <!--=============== SWEETALERT POPUP  ===============-->
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+     const progressCircle = document.querySelector(".autoplay-progress svg");
+     const progressContent = document.querySelector(".autoplay-progress span");
+     var swiper = new Swiper(".mySwiper", {
+       spaceBetween: 30,
+       centeredSlides: true,
+       slidesPerView: 3,
+       loop: true,
+       autoplay: {
+         delay: 2500,
+         disableOnInteraction: false
+       },
+       pagination: {
+         el: ".swiper-pagination",
+         clickable: true
+       },
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev"
+       },
+       breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      // spaceBetween: 20
+    },
+    // when window width is >= 480px
+    767: {
+      slidesPerView: 1,
+      // spaceBetween: 30
+    },
+  },
+       on: {
+         autoplayTimeLeft(s, time, progress) {
+           progressCircle.style.setProperty("--progress", 1 - progress);
+           progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+         }
+       }
+     });
+   </script>
+      <!-- AOS -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+  </script>
 </html>

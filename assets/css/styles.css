@@ -109,7 +109,26 @@ button {
 .nav__logo img{
   width: 40px;
 }
+html {
+  scroll-behavior: smooth;
+}
+.icon::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 45px;
+  /* top: 150%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  color:var(--first-color);
+  /* background-color: black; */
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 
+.icon:hover::after {
+  opacity: 1;
+}
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
@@ -413,6 +432,7 @@ body.dark-theme {
 
 /*=============== FEATURED ===============*/
 .featured__container {
+  overflow: hidden;
   row-gap: 2.5rem;
 }
 
@@ -1214,4 +1234,20 @@ textarea {
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
 }

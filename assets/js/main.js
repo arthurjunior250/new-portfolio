@@ -118,3 +118,61 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*=============== SMOOTH SCROLL ===============*/ 
+var container = document.getElementById("scroll-container");
+
+// Cross-browser wheel event handling
+function addEvent(element, eventName, callback) {
+  if (element.addEventListener) {
+    element.addEventListener(eventName, callback, false);
+  } else if (element.attachEvent) {
+    element.attachEvent("on" + eventName, callback);
+  }
+}
+
+// Smooth scroll function
+function smoothScroll(event) {
+  event.preventDefault(); // Prevent default scroll behavior
+
+  var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+  var scrollSpeed = 40; // Adjust scrolling speed (lower = faster)
+
+  container.scrollTop -= delta * scrollSpeed;
+}
+
+// Attach smooth scroll function to mouse wheel event
+addEvent(container, "mousewheel", smoothScroll); // For modern browsers
+addEvent(container, "DOMMouseScroll", smoothScroll); // For older Firefox
+
+/*=============== SCROLL percentage ===============*/ 
+
+let scrollPercentage = () => {
+    let scrollProgress = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round( pos * 100 / calcHeight);
+    scrollProgress.style.background = `conic-gradient(#008fff ${scrollValue}%, #c0c0ff ${scrollValue}%)`;
+    progressValue.textContent = `${scrollValue}%`;
+}
+window.onscroll = scrollPercentage;
+window.onload = scrollPercentage;
+
+/*=============== PRELOADER ===============*/ 
+// var loader = document.getElementById("preloader")
+// window.addEventListener("load", () => {
+//   loader.style.display = "none"
+// })
+var loader = document.getElementById("preloader");
+var body= document.getElementById("scroll-container");
+
+// Function to hide the preloader
+function hidePreloader() {
+  loader.style.display = "none";
+}
+
+// Show the preloader initially
+loader.style.display = "block";
+// Delay the hiding of the preloader for 5 seconds (5000 milliseconds)
+setTimeout(hidePreloader, 2000);

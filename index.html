@@ -21,7 +21,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Mr. ARTHUR JUNIOR</title>
     </head>
-    <body>
+    <body  id="scroll-container">
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -70,6 +70,8 @@
         </header>
 
         <!--==================== MAIN ====================-->
+        <!--==================== PRE-LOADER ====================-->
+        <div id="preloader"></div>
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home" id="home">
@@ -406,6 +408,11 @@
             
         </main>
 
+        <!--==================== Scroll Percentage ====================-->
+
+        <div id="progress" class="desktop">
+            <span id="progress-value"></span>
+        </div>
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
             <div class="footer__container container grid" data-aos="fade-right">

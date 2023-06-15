@@ -23,6 +23,6 @@ const createContact = (event) => {
     fullname.value = ""
     email.value = ""
     message.value = ""
-    alert("Your Form Has Been Submitted Successfully");
+    alert("Message Sent Successfully");
 }
 document.getElementById("submit").addEventListener("click", createContact)

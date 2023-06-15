@@ -49,12 +49,16 @@
                             <a href="#skills" class="nav__link">My skills</a>
                         </li>
                       
-                        <!-- <li class="nav__item">
+                        <li class="nav__item">
                             <a href="#contact" class="nav__link">Contact</a>
-                        </li> -->
+                        </li>
                         <!-- <li class="nav__item">
                             <a href="#" class="button button--small">Login</a>
                         </li> -->
+                        <button class="button-menu" id="login_btn">
+                            <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                           Message
+                        </button>
                     </ul>
 
                     <div class="nav__close" id="nav-close">
@@ -96,7 +100,47 @@
                     </div>
                 </div>
             </section>
-
+             <!--=============== POPUP BOX ===============-->
+            <div id="login_form">
+                <div class="form">
+                    <p class="heading">Verify</p>
+                    <svg class="check" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" xml:space="preserve">  <image id="image0" width="60" height="60" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAQAAACQ9RH5AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                        AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
+                        cwAACxMAAAsTAQCanBgAAAAHdElNRQfnAg0NDzN/r+StAAACR0lEQVRYw+3Yy2sTURTH8W+bNgVf
+                        aGhFaxNiAoJou3FVEUQE1yL031BEROjCnf4PLlxILZSGYncuiiC48AEKxghaNGiliAojiBWZNnNd
+                        xDza3pl77jyCyPzO8ubcT85wmUkG0qT539In+MwgoxQoUqDAKDn2kSNLlp3AGi4uDt9xWOUTK3xg
+                        hVU2wsIZSkxwnHHGKZOxHKfBe6rUqFGlTkPaVmKGn6iYao1ZyhK2zJfY0FZ9ldBzsbMKxZwZjn/e
+                        5szGw6UsD5I0W6T+hBhjUjiF7bNInjz37Ruj3igGABjbtpIo3GIh30u4ww5wr3fwfJvNcFeznhBs
+                        YgXw70TYX2bY/ulkZhWfzfBbTdtrzjPFsvFI+T/L35jhp5q2owDs51VIVvHYDM9sa/LY8XdtKy1l
+                        FXfM8FVN2/X2ajctZxVXzPA5TZvHpfb6CFXxkerUWTOcY11LX9w0tc20inX2mmF4qG3upnNWrOKB
+                        hIXLPu3dF1x+kRWq6ysHpkjDl+7eQjatYoOCDIZF3006U0unVSxIWTgTsI3HNP3soSJkFaflMDwL
+                        3OoHrph9YsPCJJ5466DyOGUHY3Epg2rWloUxnMjsNw7aw3AhMjwVhgW4HYm9FZaFQZ/bp6QeMRQe
+                        hhHehWKXGY7CAuSpW7MfKUZlAUqWdJ3DcbAAB3guZl9yKC4WYLfmT4muFtgVJwvQx7T2t0mnXK6J
+                        XlGGyAQvfNkaJ5JBmxnipubJ5HKDbJJsM0eY38QucSx5tJWTVHBwqDDZOzRNmn87fwDoyM4J2hRz
+                        NgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wMi0xM1QxMzoxNTo1MCswMDowMKC8JaoAAAAldEVY
+                        dGRhdGU6bW9kaWZ5ADIwMjMtMDItMTNUMTM6MTU6NTArMDA6MDDR4Z0WAAAAKHRFWHRkYXRlOnRp
+                        bWVzdGFtcAAyMDIzLTAyLTEzVDEzOjE1OjUxKzAwOjAwIIO3fQAAAABJRU5ErkJggg=="></image>
+                        </svg>
+                    <div class="box">
+                    <input class="input-1" type="password" maxlength="1">
+                    <input class="input-1" type="password" maxlength="1"> 
+                    <input class="input-1" type="password" maxlength="1">
+                    <input class="input-1" type="password" maxlength="1">
+                    </div>
+                    <button class="btn1">Submit</button>
+                    <button class="btn2" id="close_btn">Close</button>
+                    <p id="error-message" style="color: red; display: none;">Incorrect code. Please try again.</p>
+                    
+                </div>
+            </div>
+            <script>
+                const cancelButton = document.getElementById ("close_btn");
+                cancelButton.addEventListener ("click", ()=>{
+                loginForm.classList.remove("visible");
+                backDrop.classList.remove("visible");
+                })
+            </script>
+       
               <!--==================== ABOUT ====================-->
               <section class="story section container" id="about">
                 <div class="story__container grid">
@@ -366,14 +410,14 @@
             </section>
                              
                <!--==================== CONTACT ====================-->
-               <!-- <section class="newsletter section container" id="contact">
+               <section class="newsletter section container" id="contact">
                 <h2 class="section__title">
                     CONTACT ME
                 </h2>
                 <div class="form" id="form">
                 <form >
 
-                    <input type="text" placeholder="Enter Your name.." required="" id="contact-name" >
+                    <input type="text" placeholder="Enter Your name.." required="" id="contact-name" onkeyup='validateName()'>
                     <span class='error-message' id='name-error'></span>
 
                     <input type="text" placeholder="Enter Your Email.." required="" id="contact-email" onkeyup='validateEmail()'>
@@ -382,12 +426,12 @@
                     <textarea placeholder="Leave Your Message.." style="height:200px" required="" id='contact-message'></textarea>
                     <span class='error-message' id='message-error'></span>
 
-                    <button type="submit" id="submit" class="button">Send</button>
+                    <button type="submit" id="submit" onclick='validateForm()' class="button">Send</button>
                     <br<span class='error-message' id='submit-error'></span>
 
                 </form>
                 </div>
-            </section> -->
+            </section>
             <!--==================== NEWSLETTER ====================-->
             <!-- <section class="newsletter section container">
                 <div class="newsletter__bg grid">
@@ -571,5 +615,45 @@
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script>
     AOS.init();
+  </script>
+   <!--=============== firebase scripts ===============-->
+   <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+   <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+   <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+   <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+   <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+   <script defer src="./assets/js/configuration.js"></script>
+   <script defer src="./assets/js/validation.js"></script>
+   <script defer src="./assets/js/form.js"></script>
+ <!--=============== popup code ===============-->
+  <script>
+    // Get the submit button element
+    const submitButton = document.querySelector('.btn1');
+
+    // Add event listener to the submit button
+    submitButton.addEventListener('click', function() {
+      // Get the input values
+      const codeInputs = document.querySelectorAll('.input-1');
+      let code = '';
+      codeInputs.forEach(function(input) {
+        code += input.value;
+      });
+
+      // Check if the entered code is correct (1234)
+      if (code === '1234') {
+        // Redirect to the dashboard.html page
+        window.location.href = 'dashboard.html';
+      } else {
+        // Display error message
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.style.display = 'block';
+      }
+    });
+
+    function closeForm() {
+      // Hide error message when closing the form
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.style.display = 'none';
+    }
   </script>
 </html>

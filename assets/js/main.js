@@ -219,3 +219,21 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
     cursorBorder.style.setProperty("--size", "50px");
   });
 });
+
+
+/*=============== popup controller ===============*/ 
+
+const loginButton = document.getElementById ("login_btn");
+const loginForm = document.getElementById ("login_form");
+const backDrop = document.getElementById ("backdrop");
+
+loginButton.addEventListener ("click", ()=>{
+loginForm.classList.toggle("visible");
+backDrop.classList.toggle("visible");
+})  
+backDrop.addEventListener ("click", ()=>{
+loginForm.classList.toggle("visible");
+backDrop.classList.toggle("visible");
+})
+
+

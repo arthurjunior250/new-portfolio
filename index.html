@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <!-- AOS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+         <!--=============== toastify-js ===============-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <title>Mr. ARTHUR JUNIOR</title>
     </head>
     <body  id="scroll-container">
@@ -558,6 +560,9 @@
 		loop: true
 	})
 </script>
+
+ <!--=============== toastify-js ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
  <!--=============== CONTACT JS ===============-->
  <script src="./assets/js/contact.js"></script>
 <!--=============== SUBSCRIBE JS ===============-->
@@ -647,6 +652,13 @@
         // Display error message
         const errorMessage = document.getElementById('error-message');
         errorMessage.style.display = 'block';
+        Toastify({
+                text: "Incorrect code. Please try again.",
+                className: "info",
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                }
+            }).showToast();
       }
     });
 
@@ -654,6 +666,7 @@
       // Hide error message when closing the form
       const errorMessage = document.getElementById('error-message');
       errorMessage.style.display = 'none';
+      
     }
   </script>
 </html>

@@ -16,7 +16,7 @@ function validateName() {
 
     }
 
-    producePrompt('Valid', 'name-error', 'green');
+    producePrompt('', 'name-error', 'green');
     return true;
 
 }
@@ -39,7 +39,7 @@ function validateEmail() {
 
     }
 
-    producePrompt('Valid', 'email-error', 'green');
+    producePrompt('', 'email-error', 'green');
     return true;
 
 }
@@ -101,3 +101,6 @@ function producePrompt(message, promptLocation, color) {
     document.getElementById(promptLocation).style.color = color;
 
 }
+
+
+

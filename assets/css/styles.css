@@ -1328,6 +1328,14 @@ textarea {
   z-index: 999;
 }
 
+@media screen and (max-width:900px) {
+  #cursor {
+    display: none;
+  }
+  #cursor-border {
+    display: none;
+  }
+}
 
 
 /* message button on menu */

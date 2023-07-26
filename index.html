@@ -135,13 +135,49 @@
                     
                 </div>
             </div>
-            <script>
+            <!-- <script>
                 const cancelButton = document.getElementById ("close_btn");
                 cancelButton.addEventListener ("click", ()=>{
                 loginForm.classList.remove("visible");
                 backDrop.classList.remove("visible");
                 })
-            </script>
+            </script> -->
+            <script>
+                const cancelButton = document.getElementById("close_btn");
+                cancelButton.addEventListener("click", () => {
+                  loginForm.classList.remove("visible");
+                  backDrop.classList.remove("visible");
+                });
+            
+                const inputs = document.querySelectorAll(".input-1");
+            
+                inputs.forEach((input, index) => {
+                  input.addEventListener("input", (event) => {
+                    const value = event.target.value;
+                    if (value) {
+                      // If the input has a value, move focus to the next input if available
+                      if (index < inputs.length - 1) {
+                        inputs[index + 1].focus();
+                      } else {
+                        // If the last input has a value, trigger the submit function
+                        submitForm();
+                      }
+                    } else {
+                      // If the input value is empty, move focus to the previous input if available
+                      if (index > 0) {
+                        inputs[index - 1].focus();
+                      }
+                    }
+                  });
+                });
+            
+                function submitForm() {
+                  // Here, you can implement the logic to submit the form or perform any action.
+                  // For demonstration purposes, let's just log the entered code.
+                  const enteredCode = Array.from(inputs).map((input) => input.value).join("");
+                  console.log("Entered Code:", enteredCode);
+                }
+              </script>
        
               <!--==================== ABOUT ====================-->
               <section class="story section container" id="about">

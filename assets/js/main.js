@@ -165,16 +165,19 @@ window.onload = scrollPercentage;
 //   loader.style.display = "none"
 // })
 var loader = document.getElementById("preloader");
-var body= document.getElementById("scroll-container");
+var body = document.getElementById("scroll-container");
 
 // Function to hide the preloader
 function hidePreloader() {
   loader.style.display = "none";
+  body.style.overflow = "auto"; // Reset overflow to "auto" after hiding the preloader
 }
 
 // Show the preloader initially
 loader.style.display = "block";
-// Delay the hiding of the preloader for 5 seconds (5000 milliseconds)
+body.style.overflow = "hidden";
+
+// Delay the hiding of the preloader for 5 seconds (2000 milliseconds)
 setTimeout(hidePreloader, 2000);
 
 

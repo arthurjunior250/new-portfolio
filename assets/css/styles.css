@@ -905,7 +905,7 @@ body.dark-theme {
   #form{
     width: 100%;
 }
-.clock{
+.clock,#login_btn{
   display: none;
 }
 }

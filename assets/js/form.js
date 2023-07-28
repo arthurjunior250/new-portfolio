@@ -67,7 +67,8 @@ const createContact = (event) => {
             text: "Please fill in all the required fields",
             className: "info",
             style: {
-                background: "linear-gradient(to right, #00b09b, #96c93d)",
+                background: "linear-gradient(to right, red, #F3E8EA)",
+                color:'black'
             }
         }).showToast();
         return;

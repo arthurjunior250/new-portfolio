@@ -735,5 +735,38 @@
       
     }
   </script>
- 
+   <script type="text/javascript">
+    // Disable right-click
+    document.addEventListener('contextmenu', function(event) {
+         event.preventDefault();
+         showToastMessage("Right-click is not allowed!");
+     });
+
+     // Disable cut, copy, and paste
+     document.addEventListener('cut', function(event) {
+         event.preventDefault();
+         showToastMessage("Cut is not allowed!");
+     });
+     
+     document.addEventListener('copy', function(event) {
+         event.preventDefault();
+         showToastMessage("Copy is not allowed!");
+     });
+
+     document.addEventListener('paste', function(event) {
+         event.preventDefault();
+         showToastMessage("Paste is not allowed!");
+     });
+        // Function to show Toastify message
+        function showToastMessage(message) {
+                Toastify({
+                    text: message,
+                    className: "info",
+                    style: {
+                        background: "linear-gradient(to right, red, #F3E8EA)",
+                        color:'black'
+                    }
+                }).showToast();
+            }
+</script>
 </html>

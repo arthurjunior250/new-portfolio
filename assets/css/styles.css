@@ -905,6 +905,9 @@ body.dark-theme {
   #form{
     width: 100%;
 }
+.clock{
+  display: none;
+}
 }
 
 /*=============== BREAKPOINTS ===============*/

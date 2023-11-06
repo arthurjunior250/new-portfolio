@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/log02024.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!--=============== toastify-js ===============-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Mr. ARTHUR JUNIOR</title>
+</head>
+<body  id="scroll-container">
+<!--==================== Cursor ====================-->
+<!-- <div id="cursor"></div>
+<div id="cursor-border"></div> -->
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOBJREFUSEvtldENwjAMRF83YBNgA9gEJoBNYASYBEaATdgAdIhUVWo7baFCQuQ39j07kc8VI59qZH26AFbABphBHX8HLsAeOEZFRoAJcHoJJ40UL0A6Ai2BmwWKAEqcZkkWQCGKnfcBbIGdkeABFLoGDnmO14FVvXIjgNmFB2i+cbOoCNAsoM75XcDH5q/LoL0F6/sHJVhL7w8oDu7XnsiziuiTr5nzPmO9DjyziwC9zC5ZcG7XHsCsPupAd1o4Z2Mn5BCJL4YsnCSklakny7uRsFZmawdY9lua0MH3o3vRA87hKBl9oLVKAAAAAElFTkSuQmCC"/> -->
+                <img  class="bx-tada" loading = "lazy"  src="./assets/img/log02024.png" alt="" srcset="">
+                 Arthur Junior
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">My skills</a>
+                    </li>
+                  
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="#" class="button button--small">Login</a>
+                    </li> -->
+                    <button class="button-menu" id="login_btn">
+                        <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                       Message
+                    </button>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class='bx bx-moon change-theme' id="theme-button" style="color:hsl(31, 100%, 70%);"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+            </div>
+            <!--=================== Clock ====================-->
+    <div class="clock">
+        <div>
+           <div class="clock__date">
+              <span class="clock__day-week" id="date-day-week"></span>
+
+              <div>
+                 <span class="clock__month" id="date-month"></span>
+                 <span class="clock__day" id="date-day"></span>
+                 <span class="clock__year" id="date-year"></span>
+              </div>
+           </div>
+
+           <div class="clock__text">
+              <span class="clock__text-hour" id="text-hour"></span>
+              <span class="clock__text-minutes" id="text-minutes"></span>
+              <span class="clock__text-seconds" id="text-seconds"></span>
+              <span class="clock__text-ampm" id="text-ampm"></span>
+           </div>
+        </div>
+    </div>
+      <!--=================== Clock-end ====================-->
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <!--==================== PRE-LOADER ====================-->
+    <div id="preloader"></div>
+    <main class="main">
+      
+   
+    <!--==================== Scroll Percentage ====================-->
+
+    <div id="progress" class="desktop">
+        <span id="progress-value"></span>
+    </div>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid" data-aos="fade-right">
+            <!-- <div class="footer__content">
+                <h3 class="footer__title">My information</h3>
+
+                <ul class="footer__list">
+                    <li>KIGALI/RWANDA</li>
+                    <li><a href="tel:+250787691306">+250-787-691-306</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Me</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#contact" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Customer Support</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#contact" class="footer__link">Front-End</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Back-End</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">UI/UX Design</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Photoshop</a>
+                    </li>
+                </ul>
+            </div> -->
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://web.facebook.com/ARTHURJUNIOR250/timeline?lst=100003757660403%3A100003757660403%3A1595038098" target="_blank" class="footer__social-link">
+                        <i title="Facebook" class='icon  bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://twitter.com/arthurjunior250"target="_blank" class="footer__social-link">
+                        <i title="Twitter" class='icon  bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/arthurjunior250/" target="_blank" class="footer__social-link">
+                        <i title="Instagram" class='icon  bx bxl-instagram-alt' ></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dusabimana-arthur-junior-a8189820a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5Im4%2B23OTsSVtesCYyzSmQ%3D%3D" target="_blank" class="footer__social-link">
+                        <i title="LinkedIn" class='icon  bx bxl-linkedin' ></i>
+                    </a>
+                    <a href="https://wa.me/+250787691306" target="_blank" class="footer__social-link">
+                        <i title="Whatsapp" class='icon bx bxl-whatsapp-square' ></i>
+                    </a>
+                    <a href="mailto:arthurjunior88741@gmail.com"class="footer__social-link">
+                        <i title="Gmail" class='icon bx bxl-gmail' ></i>
+                    </a>
+                    <a href="tel:+250787691306" class="footer__social-link">
+                        <i title="Call" class='icon bx bxs-phone-call' ></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">&#169; Arthur Junior. All rigths reserved</span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+      <!--=============== CLOCK JS ===============-->
+    <script src="assets/js/clock.js"></script>
+    <!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat Plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "106809682380429");
+chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v17.0'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+<!-- //auto-input -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+var typed = new Typed(".auto-input", {
+    strings:["Fullstack Developer ", "Frontend Developer","Backend Developer", "UI Designer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+})
+</script>
+
+<!--=============== toastify-js ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!--=============== CONTACT JS ===============-->
+<script src="./assets/js/contact.js"></script>
+<!--=============== SUBSCRIBE JS ===============-->
+<script src="./assets/js/subscribe.js"></script>
+<!--=============== SWEETALERT POPUP  ===============-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+ const progressCircle = document.querySelector(".autoplay-progress svg");
+ const progressContent = document.querySelector(".autoplay-progress span");
+ var swiper = new Swiper(".mySwiper", {
+   spaceBetween: 30,
+   centeredSlides: true,
+   slidesPerView: 3,
+   loop: true,
+   autoplay: {
+     delay: 2500,
+     disableOnInteraction: false
+   },
+   pagination: {
+     el: ".swiper-pagination",
+     clickable: true
+   },
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev"
+   },
+   breakpoints: {
+1024: {
+  slidesPerView: 3,
+},
+// when window width is >= 320px
+320: {
+  slidesPerView: 1,
+  // spaceBetween: 20
+},
+// when window width is >= 480px
+767: {
+  slidesPerView: 1,
+  // spaceBetween: 30
+},
+},
+   on: {
+     autoplayTimeLeft(s, time, progress) {
+       progressCircle.style.setProperty("--progress", 1 - progress);
+       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+     }
+   }
+ });
+</script>
+  <!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<!--=============== firebase scripts ===============-->
+<script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script defer src="./assets/js/configuration.js"></script>
+<script defer src="./assets/js/validation.js"></script>
+<script defer src="./assets/js/form.js"></script>
+<!--=============== popup code ===============-->
+<script>
+// Get the submit button element
+const submitButton = document.querySelector('.btn1');
+
+// Add event listener to the submit button
+submitButton.addEventListener('click', function() {
+  // Get the input values
+  const codeInputs = document.querySelectorAll('.input-1');
+  let code = '';
+  codeInputs.forEach(function(input) {
+    code += input.value;
+  });
+
+  // Check if the entered code is correct (1234)
+  if (code === '2180') {
+    // Redirect to the dashboard.html page
+    window.location.href = 'aynaj.html';
+  } else {
+    // Display error message
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.style.display = 'block';
+    Toastify({
+            text: "Incorrect code. Please try again.",
+            className: "info",
+            style: {
+                    background: "linear-gradient(to right, red, #F3E8EA)",
+                    color:'black'
+                }
+        }).showToast();
+  }
+});
+
+function closeForm() {
+  // Hide error message when closing the form
+  const errorMessage = document.getElementById('error-message');
+  errorMessage.style.display = 'none';
+  
+}
+</script>
+<script type="text/javascript">
+// Disable right-click
+document.addEventListener('contextmenu', function(event) {
+     event.preventDefault();
+     showToastMessage("Right-click is not allowed!");
+ });
+
+ // Disable cut, copy, and paste
+ document.addEventListener('cut', function(event) {
+     event.preventDefault();
+     showToastMessage("Cut is not allowed!");
+ });
+ 
+ document.addEventListener('copy', function(event) {
+     event.preventDefault();
+     showToastMessage("Copy is not allowed!");
+ });
+
+ document.addEventListener('paste', function(event) {
+     event.preventDefault();
+     showToastMessage("Paste is not allowed!");
+ });
+    // Function to show Toastify message
+    function showToastMessage(message) {
+            Toastify({
+                text: message,
+                className: "info",
+                style: {
+                    background: "linear-gradient(to right, red, #F3E8EA)",
+                    color:'black'
+                }
+            }).showToast();
+        }
+</script>
+</html>

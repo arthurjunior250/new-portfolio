@@ -81,5 +81,22 @@ const clockText = () =>{
     if(ss < 10){ss = `0${ss}`}
 
     textSeconds.innerHTML = ss
+
+
+
+     // Determine the time of day
+   let greeting = '';
+   if (hh < 12) {
+      greeting = 'Good Morning';
+   } else if (hh < 18) {
+      greeting = 'Good Afternoon';
+   } else {
+      greeting = 'Good Evening';
+   }
+
+   // Display the greeting message
+   document.getElementById('greeting').innerHTML = greeting;
+
+   
 }
 setInterval(clockText, 1000) // (Updates every 1s) 1000 = 1s

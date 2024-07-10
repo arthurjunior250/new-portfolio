@@ -644,7 +644,7 @@ body.dark-theme {
 }
 
 .featured__card:hover {
-  background-color: var(--first-color);
+  background-color: white;
   box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
   padding: 2rem 0 3rem 0;
 }
@@ -700,6 +700,9 @@ body.dark-theme {
 }
 
 /*=============== FOOTER ===============*/
+.text-white{
+  color: hsl(0, 0%, 15%);
+}
 .footer__container {
   row-gap: 2rem;
   border-bottom: 1px solid var(--border-color);
@@ -943,6 +946,10 @@ body.dark-theme {
   #form{
     width: 100%;
 }
+}
+/* Hide all articles initially except the first three */
+.featured__card.hidden {
+  display: none;
 }
 
 
